@@ -1,0 +1,15 @@
+primes = []
+number = 0
+for x in range(2, 7920):
+    isPrime = True
+    for num in range(2, int(x ** 0.5) + 1):
+        if x % num == 0:
+            isPrime = False
+            break
+
+    if isPrime:
+        primes.append(x)
+        number = number + 1
+        if number == 1000:
+            break
+print(primes)
